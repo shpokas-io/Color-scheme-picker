@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Color-scheme-picker</title>
+  </head>
+  <body>
+    <nav class="clr-scheme-navigation-container">
+      <input type="color" id="clr-seed" />
+      <select
+        name="scheme"
+        id="clr-scheme-slct"
+        aria-placeholder="clr-scheme-menu"
+      >
+        <option value="Placeholder">choose color scheme</option>
+      </select>
+      <button id="btn-generate-scheme">Generate scheme</button>
+    </nav>
+
+    <section class="clr-container">
+      <div class="clr clr-one"></div>
+      <div class="clr clr-two"></div>
+      <div class="clr clr-three"></div>
+      <div class="clr clr-four"></div>
+      <div class="clr clr-five"></div>
+    </section>
+
+    <footer>
+      <div class="hex-txt-container">
+        <div class="hex-txt hex-txt-one"></div>
+        <div class="hex-txt hex-txt-two"></div>
+        <div class="hex-txt hex-txt-three"></div>
+        <div class="hex-txt hex-txt-four"></div>
+        <div class="hex-txt hex-txt-five"></div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
