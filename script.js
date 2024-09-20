@@ -50,6 +50,13 @@ gnrtBtn.addEventListener("click", function () {
         colorDiv.style.width = "100px";
         colorDiv.style.height = "200px";
 
+        // Add hex code inside div
+
+        colorDiv.textContent = color.hex.value;
+        colorDiv.style.color = "#fff";
+        colorDiv.style.textAlign = "center";
+        colorDiv.style.lineHeight = "100px";
+
         colorSchemeContainer.appendChild(colorDiv);
       });
     })
