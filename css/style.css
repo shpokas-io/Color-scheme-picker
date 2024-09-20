@@ -59,22 +59,6 @@ nav {
   height: 200px;
 }
 
-.clr-one {
-  background-color: red;
-}
-.clr-two {
-  background-color: yellow;
-}
-.clr-three {
-  background-color: green;
-}
-.clr-four {
-  background-color: orange;
-}
-.clr-five {
-  background-color: black;
-}
-
 .hex-txt-container {
   display: flex;
   justify-content: space-between;

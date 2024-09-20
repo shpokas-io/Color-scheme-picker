@@ -5,6 +5,7 @@
 const seedClrPicker = document.getElementById("clr-seed");
 const gnrtBtn = document.getElementById("btn-generate-scheme");
 const modeSelect = document.getElementById("clr-scheme-profile");
+const colorSchemeContainer = document.querySelector(".clr-container");
 const count = 5;
 let mode = "";
 let selectedClr = "";
@@ -37,8 +38,19 @@ gnrtBtn.addEventListener("click", function () {
     .then((data) => {
       //extract scheme data from api
       const colors = data.colors;
+      // CLEAR
+      colorSchemeContainer.innerHTML = "";
+
+      // colorSchemeContainer.innerHTML = "";
+
       colors.forEach((color) => {
-        console.log(color.hex.value);
+        const colorDiv = document.createElement("div");
+        colorDiv.style.backgroundColor = color.hex.value;
+
+        colorDiv.style.width = "100px";
+        colorDiv.style.height = "200px";
+
+        colorSchemeContainer.appendChild(colorDiv);
       });
     })
     .catch((error) => {
