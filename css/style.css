@@ -2,4 +2,81 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+#clr-seed,
+#clr-scheme-profile,
+#btn-generate-scheme {
+  background-color: white;
+  border: 1px solid lightgray;
+}
+
+#clr-seed {
+  width: 60px;
+  height: 40px;
+  border-radius: 0.3em;
+}
+
+#clr-scheme-profile {
+  padding: 0.8em;
+  font-size: 1rem;
+  text-transform: capitalize;
+  border-radius: 0.3em;
+}
+
+#btn-generate-scheme {
+  font-size: 1em;
+  padding: 0.7em 1.5em;
+  border-radius: 0.3em;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+#btn-generate-scheme:hover {
+  background-color: rgb(212, 212, 212);
+  font-weight: bold;
+}
+
+nav {
+  margin: 1em;
+}
+
+.clr-scheme-navigation-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.clr-container {
+  display: flex;
+}
+
+.clr {
+  width: 100%;
+  height: 200px;
+}
+
+.clr-one {
+  background-color: red;
+}
+.clr-two {
+  background-color: yellow;
+}
+.clr-three {
+  background-color: green;
+}
+.clr-four {
+  background-color: orange;
+}
+.clr-five {
+  background-color: black;
+}
+
+.hex-txt-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
 }
