@@ -41,6 +41,23 @@ function createColorDiv(hexCode) {
   return colorDiv;
 }
 
+// FUnction to generate random RGB color
+function getRandomRgbColor() {
+  const r = Marth.floor(Math.random() * 256);
+  const g = Marth.floor(Math.random() * 256);
+  const b = Marth.floor(Math.random() * 256);
+  return `rgb${r}, ${g}, ${b}`;
+}
+
+//Display random colors of rgb
+function displayInitialColors() {
+  colorSchemeContainer.innerHTML = "";
+  for (let i = 0; i < count; i++) {
+    const colorDiv = createColorDiv(getRandomRgbColor());
+    colorSchemeContainer.appendChild(colorDiv);
+  }
+}
+
 //Event listener for mode variable
 modeSelect.addEventListener("change", function (e) {
   mode = e.target.value;
@@ -68,6 +85,12 @@ gnrtBtn.addEventListener("click", function () {
       return res.json();
     })
     .then((data) => {
+      console.log(data);
+
+      if (!data.colors) {
+        console.log("No colors found in response");
+        return;
+      }
       // Clear
 
       colorSchemeContainer.innerHTML = "";
@@ -82,3 +105,4 @@ gnrtBtn.addEventListener("click", function () {
       console.error(`There was a problem with the fetch operation`, error);
     });
 });
+displayInitialColors();

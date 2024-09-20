@@ -4,6 +4,7 @@ WORK IN PROGRESS
 
 - [Overview](#overview)
   - [About](#the-challenge)
+  - [How to use](#usage)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -15,6 +16,11 @@ WORK IN PROGRESS
 ### About
 
 Color Scheme Picker: Dive into this fun app where you can pick a base color <br>and generate cool color schemes! Just choose your color and style, and watch as vibrant color divs pop up.<br> Click on any color to copy its hex code—easy peasy! Perfect for designers or anyone looking to spice up their projects.
+
+### How to use
+
+Simply choose seed color, choose scheme you want to be generated,<br>
+click the magic button !
 
 ### Screenshot
 
