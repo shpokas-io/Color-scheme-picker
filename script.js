@@ -44,18 +44,39 @@ gnrtBtn.addEventListener("click", function () {
       // colorSchemeContainer.innerHTML = "";
 
       colors.forEach((color) => {
-        const colorDiv = document.createElement("div");
-        colorDiv.style.backgroundColor = color.hex.value;
+        const hexCode = color.hex.value;
 
-        colorDiv.style.width = "100px";
+        const colorDiv = document.createElement("div");
+
+        colorDiv.style.backgroundColor = hexCode;
+        colorDiv.style.backgroundColor = color.hex.value;
+        //Styling div
+        colorDiv.style.width = "100%";
         colorDiv.style.height = "200px";
+        colorDiv.style.position = "relative";
+        colorDiv.style.cursor = "pointer";
 
         // Add hex code inside div
+        const hexText = document.createElement("span");
+        hexText.textContent = hexCode;
+        hexText.style.position = "absolute";
+        hexText.style.bottom = "10px";
+        hexText.style.left = "10px";
+        hexText.style.color = "#fff";
+        colorDiv.appendChild(hexText);
 
-        colorDiv.textContent = color.hex.value;
-        colorDiv.style.color = "#fff";
-        colorDiv.style.textAlign = "center";
-        colorDiv.style.lineHeight = "100px";
+        // Feature - copy text to clipboard
+
+        colorDiv.addEventListener("click", function () {
+          navigator.clipboard
+            .writeText(hexCode)
+            .then(() => {
+              alert(`Hex code ${hexCode} copied to clipboard!`);
+            })
+            .catch((err) => {
+              console.error(`Failed to copy: `, err);
+            });
+        });
 
         colorSchemeContainer.appendChild(colorDiv);
       });
