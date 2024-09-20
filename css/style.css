@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* INPUTS AND BUTTONS STYLE */
 #clr-seed,
 #clr-scheme-profile,
 #btn-generate-scheme {
@@ -38,6 +39,8 @@
   background-color: rgb(212, 212, 212);
 }
 
+/* NAVIGATION STYLES */
+
 nav {
   margin: 1em;
 }
@@ -50,6 +53,8 @@ nav {
   align-items: center;
 }
 
+/* COLOR DIV STYLES */
+
 .clr {
   width: 100%;
   height: 200px;
@@ -60,6 +65,7 @@ nav {
   justify-content: space-between;
   font-size: 0.9em;
 }
+
 /* MEDIUM SCREEN */
 @media (min-width: 768px) {
   .clr-scheme-navigation-container {
@@ -81,6 +87,12 @@ nav {
     margin: 0;
   }
 }
+
+@media (min-width: 509px) {
+  #btn-generate-scheme {
+    margin: 0;
+  }
+}
 /* Large screen size */
 @media (min-width: 1024px) {
   .clr-scheme-navigation-container {
@@ -95,7 +107,7 @@ nav {
 
   .clr {
     width: 33.33%;
-    height: 50vh;
+    height: 90vh;
   }
 
   #btn-generate-scheme {
