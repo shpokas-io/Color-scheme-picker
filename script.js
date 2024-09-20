@@ -52,7 +52,7 @@ gnrtBtn.addEventListener("click", function () {
         colorDiv.style.backgroundColor = color.hex.value;
         //Styling div
         colorDiv.style.width = "100%";
-        colorDiv.style.height = "200px";
+        colorDiv.classList.add("clr");
         colorDiv.style.position = "relative";
         colorDiv.style.cursor = "pointer";
 
